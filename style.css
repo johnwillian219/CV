@@ -1,0 +1,635 @@
+/* Fonte Poppins já incluída no HTML */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f4f7fa;
+  padding: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+#download-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #0077cc;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease;
+}
+
+#download-btn:hover {
+  background: #005fa3;
+}
+
+.cv {
+  display: flex;
+  max-width: 960px;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* Bio Section Styling */
+.bio-section {
+  margin-bottom: 2rem;
+}
+
+.bio-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 119, 204, 0.1);
+  overflow: hidden;
+  border-left: 4px solid #0077cc;
+}
+
+.bio-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #f8faff 0%, #e6f0fa 100%);
+  border-bottom: 1px solid #e0e9f5;
+}
+
+.bio-icon {
+  font-size: 1.5rem;
+  color: #0077cc;
+  margin-right: 1rem;
+}
+
+.bio-title {
+  font-size: 12px;
+  color: #003652;
+  margin: 0;
+  font-weight: 600;
+}
+
+.bio-content {
+  padding: 1.5rem;
+}
+
+.bio-text {
+  color: #444;
+  line-height: 1.7;
+  font-size: 0.85rem;
+  margin: 0;
+  text-align: justify;
+}
+
+/* Efeito hover sutil */
+.bio-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 119, 204, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .bio-header {
+    padding: 0.8rem 1rem;
+  }
+
+  .bio-content {
+    padding: 1rem;
+  }
+
+  .bio-text {
+    font-size: 0.9rem;
+  }
+}
+
+aside {
+  width: 37%;
+  background: linear-gradient(160deg, #eaf4fc, #d0e5f8);
+  padding: 2rem;
+  color: #003652;
+}
+
+aside img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 2rem auto;
+  border: 3px solid #0077cc;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section h2 {
+  font-size: 15px;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #0077cc;
+  border-bottom: 1px solid #b4d9f3;
+  padding-bottom: 4px;
+}
+
+.section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.section ul li {
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+}
+
+.section ul li a {
+  color: #005fa3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.section ul li a:hover {
+  color: #003b6f;
+}
+
+.section ul li i {
+  margin-right: 8px;
+  color: #0077cc;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Barra de idioma */
+.languages-section {
+  padding-top: 0.5rem;
+}
+
+.language-block {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #72b0e7;
+  padding-bottom: 0.8rem;
+}
+
+.language-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #003652;
+  margin-bottom: 6px;
+}
+
+.level {
+  font-weight: 600;
+  color: #0077cc;
+}
+
+.progress-bar {
+  background: #e6f0fb;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 8px;
+  margin-bottom: 6px;
+}
+
+.progress-bar .filled {
+  display: block;
+  height: 100%;
+  background-color: #0077cc;
+  border-radius: 6px;
+  transition: width 0.4s ease;
+}
+/* ===== SOCIAL NETWORKS SECTION ===== */
+.social-section {
+  margin-top: 2rem;
+  padding: 0.5rem 0;
+}
+
+.social-section h2 {
+  font-size: 15px;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #0077cc;
+  border-bottom: 1px solid rgba(0, 119, 204, 0.2);
+  padding-bottom: 6px;
+  position: relative;
+}
+
+.social-section h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 50px;
+  height: 2px;
+  background: #0077cc;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  padding: 0.3rem;
+}
+
+.social-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+.social-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.6rem;
+  font-size: 17px;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ícone do Portfolio */
+.social-icon.portfolio {
+  background: linear-gradient(135deg, #4e9eff 0%, #2a7ae9 100%);
+}
+
+/* Ícone do LinkedIn */
+.social-icon.linkedin {
+  background: linear-gradient(135deg, #0a66c2 0%, #004182 100%);
+}
+
+/* Ícone do GitHub */
+.social-icon.github {
+  background: linear-gradient(135deg, #4078c0 0%, #2c4a7a 100%);
+}
+
+.social-text {
+  font-size: 12px;
+  color: #003652;
+  text-align: center;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+/* Efeitos Hover */
+.social-item:hover {
+  transform: translateY(-3px);
+}
+
+.social-item:hover .social-icon {
+  transform: scale(1.1);
+  box-shadow: 0 5px 12px rgba(0, 119, 204, 0.3);
+}
+
+.social-item:hover .social-text {
+  color: #0077cc;
+}
+
+/* Versão Mobile */
+@media (max-width: 768px) {
+  .social-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .social-item {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.8rem;
+    border-radius: 8px;
+    background: rgba(240, 247, 255, 0.6);
+    border: 1px solid rgba(0, 119, 204, 0.1);
+  }
+
+  .social-icon {
+    margin-bottom: 0;
+    width: 38px;
+    height: 38px;
+    font-size: 15px;
+    box-shadow: none;
+  }
+
+  .social-text {
+    font-size: 13px;
+    text-align: left;
+    flex-grow: 1;
+  }
+
+  .social-item:hover {
+    background: rgba(0, 119, 204, 0.05);
+    transform: translateY(0);
+  }
+
+  .social-item:hover .social-icon {
+    transform: scale(1.05);
+  }
+}
+
+/* Efeito de impressão */
+@media print {
+  .social-section {
+    page-break-inside: avoid;
+  }
+
+  .social-icon {
+    border: 1px solid #ddd !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .social-text {
+    color: #333 !important;
+  }
+}
+
+.language-desc {
+  font-size: 12.5px;
+  color: #666;
+  font-style: italic;
+}
+
+main {
+  width: 68%;
+  padding: 2rem;
+}
+
+header h1 {
+  font-size: 28px;
+  color: #0077cc;
+  margin-bottom: 10px;
+}
+
+.bio {
+  font-size: 15px;
+  margin-bottom: 2.5rem;
+  color: #444;
+}
+
+/* Versão Compacta e Elegante */
+.professional-experience {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  color: #0077cc;
+  margin-bottom: 1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #e0e0e0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.experience-item {
+  padding: 1rem;
+  border-left: 3px solid #0077cc;
+  background: #f9fbfe;
+  border-radius: 0 6px 6px 0;
+}
+
+.experience-header {
+  margin-bottom: 0.8rem;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.job-title {
+  font-size: 1rem;
+  color: #003652;
+  font-weight: 600;
+}
+
+.experience-period {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.company-link {
+  display: block;
+  font-size: 0.9rem;
+  color: #0077cc;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s;
+}
+
+.company-link:hover {
+  color: #005fa3;
+  text-decoration: underline;
+}
+
+.responsibilities {
+  list-style: none;
+  padding-left: 0.8rem;
+}
+
+.responsibilities li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.responsibilities li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #0077cc;
+  font-size: 0.9rem;
+}
+/* Responsivo */
+@media (max-width: 768px) {
+  .experience-item {
+    padding: 1rem;
+  }
+
+  .job-title {
+    font-size: 1.1rem;
+  }
+
+  .company-name {
+    font-size: 0.95rem;
+  }
+}
+/* Versão Compacta e Elegante */
+.education-section {
+  padding: 1rem 0;
+}
+
+.section-title {
+  color: #0077cc;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e9f5;
+  padding-bottom: 0.3rem;
+}
+
+.education-grid {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.education-card {
+  display: flex;
+  gap: 0.8rem;
+  padding: 0.8rem;
+  background: #f9fbfe;
+  border-radius: 6px;
+  border-left: 3px solid #0077cc;
+  align-items: flex-start;
+}
+
+.degree-icon {
+  font-size: 1.2rem;
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+}
+
+.education-card h3 {
+  font-size: 0.95rem;
+  color: #003652;
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.education-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  align-items: center;
+}
+
+.institution {
+  color: #0077cc;
+  font-weight: 500;
+}
+
+.date {
+  color: #666;
+  font-size: 0.75rem;
+}
+
+/* Removido o divider (|) para economizar espaço */
+
+/* Impressão */
+@media print {
+  #download-btn {
+    display: none;
+  }
+
+  body {
+    background: white;
+    padding: 0;
+    margin: 0;
+  }
+
+  .cv {
+    width: 210mm;
+    min-height: 297mm;
+    box-shadow: none;
+    border-radius: 0;
+    page-break-inside: avoid;
+  }
+
+  aside,
+  main {
+    page-break-inside: avoid;
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .cv {
+    flex-direction: column;
+  }
+
+  aside,
+  main {
+    width: 100%;
+  }
+
+  #download-btn {
+    top: 10px;
+    right: 10px;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  aside {
+    border-bottom: 2px solid #ccc;
+  }
+}
+
+.certifications-minimal {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+
+.certifications-minimal li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.7rem;
+  font-size: 13px;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.cert-icon {
+  position: absolute;
+  left: 0;
+  font-size: 14px;
+  color: #0077cc;
+}
+
+.cert-title {
+  font-weight: 600;
+  color: #003652;
+}
+
+.cert-info {
+  color: #666;
+  font-size: 11px;
+  margin-left: 0.3rem;
+}
+
+/* Versão com ícones Font Awesome (alternativa) */
+.cert-icon.fa {
+  font-size: 12px;
+}
