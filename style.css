@@ -70,7 +70,7 @@ body {
 }
 
 .bio-title {
-  font-size: 12px;
+  font-size: 13px;
   color: #003652;
   margin: 0;
   font-weight: 600;
@@ -96,7 +96,7 @@ body {
 }
 
 aside {
-  width: 38%;
+  width: 37%;
   background: linear-gradient(160deg, #eaf4fc, #d0e5f8);
   padding: 2rem;
   color: #003652;
